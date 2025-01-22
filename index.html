@@ -17,22 +17,27 @@
 <p class="p1">&lt;head&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;ランダムリダイレクト&lt;/title&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.onload = function() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// リダイレクト用プログラム</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// 複数のURLからランダムに選択してリダイレクトする</p>
 <p class="p1"><span class="Apple-converted-space">        </span>f_redirect();</p>
 <p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">        </span>function f_redirect() {</p>
-<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// 下のクォーテーション内('')にリダイレクトしたいURLを記述</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// 最後の行末にカンマ(,)は不要</p>
 <p class="p1"><span class="Apple-converted-space">        </span>var arr = [</p>
-<p class="p1"><span class="Apple-converted-space">            </span>'<a href="https://ja.wikipedia.org/wiki/Color_Change!">https://ja.wikipedia.org/wiki/Color_Change!</a>', <span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>'<a href="https://ja.wikipedia.org/wiki/%E5%A4%A7%E9%87%8C%E6%9D%91_(%E6%B2%96%E7%B8%84%E7%9C%8C)">https://ja.wikipedia.org/wiki/大里村_(沖縄県)</a>',<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>'<a href="https://ja.wikipedia.org/wiki/TAIZO%E3%80%9C%E6%88%A6%E5%A0%B4%E3%82%AB%E3%83%A1%E3%83%A9%E3%83%9E%E3%83%B3%E3%83%BB%E4%B8%80%E3%83%8E%E7%80%AC%E6%B3%B0%E9%80%A0%E3%81%AE%E7%9C%9F%E5%AE%9F%E3%80%9C">https://ja.wikipedia.org/wiki/TAIZO〜戦場カメラマン・一ノ瀬泰造の真実〜</a>'<span class="Apple-converted-space"> </span></p>
-<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>'https://ja.wikipedia.org/wiki/Color_Change!',</p>
+<p class="p1"><span class="Apple-converted-space">            </span>'https://ja.wikipedia.org/wiki/%E5%A4%A7%E9%87%8C%E6%9D%91_(%E6%B2%96%E7%B8%84%E7%9C%8C)',</p>
+<p class="p1"><span class="Apple-converted-space">             </span>'https://ja.wikipedia.org/wiki/TAIZO%E3%80%9C%E6%88%A6%E5%A0%B4%E3%82%AB%E3%83%A1%E3%83%A9%E3%83%9E%E3%83%B3%E3%83%BB%E4%B8%80%E3%83%8E%E7%80%AC%E6%B3%B0%E9%80%A0%E3%81%AE%E7%9C%9F%E5%AE%9F%E3%80%9C'</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
 <p class="p1"><span class="Apple-converted-space">        </span>var num = arr.length;</p>
 <p class="p1"><span class="Apple-converted-space">        </span>if (arr.length == 0) return false;</p>
 <p class="p2"><br></p>
-<p class="p2"><span class="Apple-converted-space">       </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// 0 から (arr.length - 1) の乱数を取得</p>
 <p class="p1"><span class="Apple-converted-space">        </span>var num = Math.floor(Math.random() * arr.length);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>location.href = arr[num];<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>location.href = arr[num]; // リダイレクト</p>
 <p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">       </span>};</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
 <p class="p1">&lt;/head&gt;</p>
 <p class="p1">&lt;body&gt;</p>
